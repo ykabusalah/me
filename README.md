@@ -1,5 +1,7 @@
 #me
 
+This is a personal website that I am making to showcase my work, my love for art and technology, and as a fun little project to play around with. 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
