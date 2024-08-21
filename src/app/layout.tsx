@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar/navbar";
+import Footer from "@/components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,9 +16,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  // Constants for Footer props
+  const currentYear = new Date().getFullYear();
+  const email = "hello@example.com";
+  const artistName = "John Doe";
+  const artPageLink = "/draw";
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar/>
+        
+
+        {children}
+        
+        <Footer 
+          currentYear={currentYear}
+          email={email}
+          artistName={artistName}
+          artPageLink={artPageLink}
+        />
+
+      </body>
     </html>
   );
 }
